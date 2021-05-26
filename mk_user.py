@@ -16,7 +16,7 @@ def create_my_user(first_name, last_name, hobbies):
     )
     db.session.commit()
 
-if __name__ == "__main":
+if __name__ == "__main__":
     create_my_user("Johnny", "Jimenez", "Mechanic")
     users = User.query.all()
     print(users)
