@@ -19,7 +19,7 @@ def about():
     me = {
         "first_name":"Johnny",
         "last_name": "Jimenez",
-        "hobbies": "Working on cars",
+        "hobbies": "Playing with my kids and working on cars",
         "ok":"True"
     }
     return render_template("about.html", user=me)
