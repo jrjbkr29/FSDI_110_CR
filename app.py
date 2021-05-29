@@ -5,20 +5,21 @@ from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config["SQL_ALCHEMY_DATABASE_URI"] = "sqlite:///mydb.db"
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///mydb.db"
 db = SQLAlchemy(app)
 
 from database import User
 
-@app.route("/")
+@app.route("/index")
 def hello():
-    return render_template("home.html")
+    return render_template("index.html")
+
 @app.route("/about")
 def about():
     me = {
         "first_name":"Johnny",
         "last_name": "Jimenez",
-        "hobbies": "DIY stuff, mechanic",
+        "hobbies": "Working on cars",
         "ok":"True"
     }
     return render_template("about.html", user=me)

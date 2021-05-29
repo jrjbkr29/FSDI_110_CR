@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 
-{% block title %}About {{user["first_name"]}}{%endblock title %}
+{% block title %}Flask App{% endblock title %}
 
 {% block content %}
-    <h1>About {{user["first_name"]}}</h1>
-    <p>Hello, I am {{user["first_name"] }} {{ user["last_name"]}}.</p>
-    <p>My favorites hobbies are: {{ user["hobbies"] }}.</p>
+    <div class="container-fluid position-relative">
+        <h1>Welcome to Flask</h1>
+    </div>
 {% endblock content %}

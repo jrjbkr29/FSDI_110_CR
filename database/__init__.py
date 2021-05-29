@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf8 -*-
-"""Database modles"""
+"""Database modules"""
 
 from app import db
 
@@ -11,4 +11,4 @@ class User(db.Model):
     hobbies = db.Column(db.String, nullable=True)
 
     def __repr__(self):
-        return "<User %r>" % (self.first_name, self.last_name)
+        return "<User %r %r>" % (self.first_name, self.last_name)
